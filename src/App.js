@@ -17,8 +17,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/login" element={<LogIn/>}/>
-        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/login" element={<LogIn setIsVisible={setIsVisible}/>}/>
+        <Route path="/signup" element={<SignUp setIsVisible={setIsVisible}/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
     </div>
