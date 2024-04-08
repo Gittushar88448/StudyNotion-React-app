@@ -3,11 +3,11 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
 import Dashboard from "./pages/Dashboard";
-import Error from "./pages/Error";
 import Navbar from "./components/Navbar"
 import { useState } from "react";
 import "./index.css"
 import PrivateRoute from "./components/PrivateRoute"
+import Error from "./pages/Error";
 
 function App() {
 
