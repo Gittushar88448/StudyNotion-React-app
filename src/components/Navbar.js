@@ -7,13 +7,13 @@ const Navbar = (props) => {
     let setIsVisible = props.setIsVisible;
 
   return (
-    <div className='flex justify-evenly'>
+    <div className='flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto'>
         <Link to="/">
             <img src={Logo} alt="Logo" width={160} height={32} loading="lazy"></img>
         </Link>
 
         <nav>
-            <ul className='flex gap-3'>
+            <ul className='text-richblack-100 flex gap-x-6'>
                 <li>
                     <Link to="/">Home</Link>
                 </li>
@@ -30,17 +30,19 @@ const Navbar = (props) => {
 
         {/* Button Section */}
 
-        <div className='flex gap-2'>
+        <div className='flex items-center gap-x-4'>
 
             { !isVisible &&
                 <Link to="/login">
-                   <button>Login</button>
+                   <button className='bg-richblack-800 text-richblack-100 py-[8px] 
+                    px-[12px] rounded-[8px] border border-richblack-700 '>Log in</button>
                 </Link>
             }
 
             { !isVisible &&
                <Link to="/signup">
-                  <button>Sign Up</button> 
+                  <button className='bg-richblack-800 text-richblack-100 py-[8px] 
+                    px-[12px] rounded-[8px] border border-richblack-700'>Sign Up</button> 
                </Link>
             }
 
@@ -48,13 +50,16 @@ const Navbar = (props) => {
                 <Link to="/">
                   <button onClick={() =>{
                     setIsVisible(false);
-                  }}>LogOut</button>
+                  }}
+                  className='bg-richblack-800 text-richblack-100 py-[8px] 
+                  px-[12px] rounded-[8px] border border-richblack-700'>LogOut</button>
                 </Link>
             }
 
             {isVisible &&
                 <Link to="/dashboard">
-                   <button>Dashboard</button>
+                   <button className='bg-richblack-800 text-richblack-100 py-[8px] 
+                    px-[12px] rounded-[8px] border border-richblack-700'>Dashboard</button>
                 </Link>
             }
 
